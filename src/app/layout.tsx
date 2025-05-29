@@ -3,8 +3,9 @@
 // import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// import Navbar from "./navbar";
+import Navbar from "./navbar";
 // import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,8 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const disableNavbar = ["/login", "/register"];
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -27,14 +30,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   // const [state, setState] = useState(0);
+  const path_name = usePathname();
 
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <Navbar></Navbar>
-        <div>
+        {!disableNavbar.includes(path_name) && <Navbar />}
+        {/* <div>
           Layout - {state}
         </div>
         <button onClick={() => setState(state + 1)}>Click Me</button> */}
