@@ -33,11 +33,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar>
         <div>
           Layout - {state}
         </div>
-        <button onClick={() => setState(state + 1)}>Click Me</button>
+        <button onClick={() => setState(state + 1)}>Click Me</button> */}
         {children}
       </body>
     </html>
