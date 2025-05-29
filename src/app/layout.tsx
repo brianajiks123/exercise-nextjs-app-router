@@ -1,10 +1,10 @@
 "use client";
 
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./navbar";
-import { useState } from "react";
+// import Navbar from "./navbar";
+// import { useState } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +26,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [state, setState] = useState(0);
+  // const [state, setState] = useState(0);
 
   return (
     <html lang="en">
